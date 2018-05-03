@@ -22,6 +22,7 @@ with open(EXONS_TABLE) as fp:
                 if nucleus != '':
                     if abs(float(nucleus)) > STD_DEV_THRESH:
                         genes.append(gene)
+                        break
             except ValueError:
                 ''' This exception is here to handle the error
                 thrown when the float has the letters in it'''
